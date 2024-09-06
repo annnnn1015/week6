@@ -1,0 +1,19 @@
+.article_sort {
+    font-size: 14px;
+}
+
+.content::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #FFFFFF);
+    display: block;
+    bottom: 0;
+}
+
+.other {
+    .btn:hover {
+        color: $accent-300 !important;
+    }
+}

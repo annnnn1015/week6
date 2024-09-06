@@ -1,0 +1,19 @@
+@import "bootstrap/scss/functions";
+// ../node_modules/這段不用打，因為vite本身已經載入了
+@import "./helpers/variables";
+// variables.scss檔案底部已經載入variables-dark.scss，所以不用再載入
+@import "bootstrap/scss/bootstrap";
+// Enable responsive:啟用bootstrap未開啟的響應式class(https://getbootstrap.com/docs/5.2/utilities/api/)
+$utilities: map-merge($utilities, ("font-size": map-merge(map-get($utilities, "font-size"),
+                (responsive: true),
+            ),
+        ));
+@import "bootstrap/scss/utilities/api";
+
+@import "./base/base.scss";
+@import './layout/header.scss';
+@import './layout/footer.scss';
+
+
+@import './pages/index.scss';
+@import './pages/article';
